@@ -15,7 +15,7 @@ body {
     grid-template-columns: repeat(4, 100px);
     justify-content: center;
     align-content: center;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     gap: 1px 1px;
     grid-template-areas:
@@ -26,7 +26,7 @@ body {
       "A7 A8 A9 subt"
       "dot A0 equals equals";
 }
-.grid-container > button{
+.grid-container > button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
@@ -114,3 +114,16 @@ body {
   #equals {
     grid-area: equals;
   }
+
+  @media screen and (max-width:768px){
+    .grid-container {
+      grid-template-columns: repeat(4, 70px);
+      grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+      min-height: 100vh;
+    }
+    .grid-container>button {
+        font-size: 1.3rem;
+        font-weight: 300;
+        padding: 5px;
+    }
+}
