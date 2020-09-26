@@ -149,6 +149,7 @@ const equalsButton = document.querySelector("[data-equal]");
 equalsButton.addEventListener("click", (button) => {
   calculator.compute();
   calculator.updateDisplay();
+  calculator.clear();
 });
 
 
